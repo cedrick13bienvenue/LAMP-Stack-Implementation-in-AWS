@@ -71,7 +71,7 @@ A relational database is required to store application data such as user records
   ```
 
 > **Expected Output:** The MySQL administrative prompt `mysql>` should appear.
-> ![Apache2 Ubuntu Default Pag](screenshoots/4.png)
+> ![The MySQL administrative prompt](screenshoots/4.png)
 
 ### 2.2 Security Hardening
 
@@ -82,6 +82,29 @@ sudo mysql_secure_installation
 ```
 
 > **Expected Output:** After completing the prompts, the script should finish with **"Success. All done!"**.
-> ![Apache2 Ubuntu Default Pag](screenshoots/_4.png)
+> ![Security Hardening](screenshoots/_4.png)
+
+---
+
+## Phase 3: Application Layer (PHP)
+
+PHP enables dynamic content generation and communication between Apache and MySQL.
+
+### 3.1 Installation
+
+- **Install PHP and required modules**
+
+  ```bash
+  sudo apt install php libapache2-mod-php php-mysql
+  ```
+
+- **Verify PHP installation**
+
+  ```bash
+  php -v
+  ```
+
+> **Expected Output:** PHP version information such as **"PHP 8.3.6 (cli)"** should be displayed.
+> ![PHP version](screenshoots/5.png)
 
 ---
