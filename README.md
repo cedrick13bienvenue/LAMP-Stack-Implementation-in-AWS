@@ -40,3 +40,14 @@ To prepare the environment, synchronize the local package index with global Ubun
 Configure Security Group: Open Port 80 (HTTP) to 0.0.0.0/0 in the AWS EC2 Security Group.
 
 > ![Networking and Verification](screenshoots/2.png)
+
+- **Public IP Access:** Navigate to the following URL in your browser:
+
+  ```text
+  http://<YOUR_PUBLIC_IP>:80
+  ```
+
+> **Web Preview:** The **Apache2 Ubuntu Default Page** with the red header **"It works!"** should appear.
+> ![Apache2 Ubuntu Default Pag](screenshoots/3.png)
+
+---
