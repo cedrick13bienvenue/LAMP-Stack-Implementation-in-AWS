@@ -51,3 +51,37 @@ Configure Security Group: Open Port 80 (HTTP) to 0.0.0.0/0 in the AWS EC2 Securi
 > ![Apache2 Ubuntu Default Pag](screenshoots/3.png)
 
 ---
+
+## Phase 2: Data Persistence Layer (MySQL)
+
+A relational database is required to store application data such as user records and state information.
+
+### 2.1 Installation
+
+- **Install MySQL Server**
+
+  ```bash
+  sudo apt install mysql-server
+  ```
+
+- **Access MySQL Shell**
+
+  ```bash
+  sudo mysql
+  ```
+
+> **Expected Output:** The MySQL administrative prompt `mysql>` should appear.
+> ![Apache2 Ubuntu Default Pag](screenshoots/4.png)
+
+### 2.2 Security Hardening
+
+Run MySQL's built-in security script to remove insecure defaults:
+
+```bash
+sudo mysql_secure_installation
+```
+
+> **Expected Output:** After completing the prompts, the script should finish with **"Success. All done!"**.
+> ![Apache2 Ubuntu Default Pag](screenshoots/_4.png)
+
+---
