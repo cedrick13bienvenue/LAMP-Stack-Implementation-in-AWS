@@ -164,3 +164,44 @@ To follow best practices, application files are served from a custom directory i
 > ![Web Preview](screenshoots/7.png)
 
 ---
+
+## Phase 5: Final Validation and Precedence
+
+Apache determines which index file to load based on priority. The file `/etc/apache2/mods-enabled/dir.conf` is adjusted to prioritize `index.php`.
+
+### 5.1 PHP Diagnostic Test
+
+Create a PHP diagnostic file to validate PHP processing:
+
+- **Create test file**
+
+  ```bash
+  vi /var/www/projectlamp/index.php
+  ```
+
+  ```php
+  <?php phpinfo(); ?>
+  ```
+
+  > ![PHP Diagnostic Test](screenshoots/8.png)
+
+- **Access via browser**
+
+  ```text
+  http://<YOUR_PUBLIC_IP>:80/index.php
+  ```
+
+> **Web Preview:** The purple **PHP Version Information Page** should be displayed.
+> ![PHP Version Information Page](screenshoots/9.png)
+
+---
+
+## Conclusion and Cleanup
+
+The LAMP stack is now fully operational on AWS EC2. To prevent exposure of sensitive configuration details, remove the diagnostic file:
+
+```bash
+sudo rm /var/www/projectlamp/index.php
+```
+
+---
