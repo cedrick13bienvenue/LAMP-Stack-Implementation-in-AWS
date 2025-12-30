@@ -160,7 +160,10 @@ To follow best practices, application files are served from a custom directory i
   ```
 
 > **Expected Output:** The syntax check should return **"Syntax OK"**.
-> ![Activation and Syntax Check](screenshoots/6.png) > **Web Preview:** Requests to `http://<YOUR_PUBLIC_IP>:80` will now serve content from `/var/www/projectlamp`.
+> ![Activation and Syntax Check](screenshoots/6.png) >
+
+**Web Preview:** Requests to `http://<YOUR_PUBLIC_IP>:80` will now serve content from `/var/www/projectlamp`.
+
 > ![Web Preview](screenshoots/7.png)
 
 ---
