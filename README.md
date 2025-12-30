@@ -34,3 +34,9 @@ To prepare the environment, synchronize the local package index with global Ubun
 
 > **Expected Output:** The terminal should display a green indicator and the text **"Active: active (running)"**.
 > ![Installation and Service Management](screenshoots/1.png)
+
+1.2 Networking and Verification
+
+Configure Security Group: Open Port 80 (HTTP) to 0.0.0.0/0 in the AWS EC2 Security Group.
+
+> ![Networking and Verification](screenshoots/2.png)
