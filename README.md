@@ -108,3 +108,59 @@ PHP enables dynamic content generation and communication between Apache and MySQ
 > ![PHP version](screenshoots/5.png)
 
 ---
+
+## Phase 4: Virtual Hosting and Root Directory Encapsulation
+
+To follow best practices, application files are served from a custom directory instead of `/var/www/html`.
+
+### 4.1 Custom Web Root Setup
+
+- **Create project directory**
+
+  ```bash
+  sudo mkdir /var/www/projectlamp
+  ```
+
+- **Assign ownership**
+
+  ```bash
+  sudo chown -R $USER:$USER /var/www/projectlamp
+  ```
+
+- **Create Apache virtual host configuration**
+
+  ```bash
+  sudo vi /etc/apache2/sites-available/projectlamp.conf
+  ```
+
+### 4.2 Activation and Syntax Check
+
+- **Enable the new virtual host**
+
+  ```bash
+  sudo a2ensite projectlamp
+  ```
+
+- **Disable default site**
+
+  ```bash
+  sudo a2dissite 000-default
+  ```
+
+- **Test Apache configuration syntax**
+
+  ```bash
+  sudo apache2ctl configtest
+  ```
+
+- **Reload Apache**
+
+  ```bash
+  sudo systemctl reload apache2
+  ```
+
+> **Expected Output:** The syntax check should return **"Syntax OK"**.
+> ![Activation and Syntax Check](screenshoots/6.png) > **Web Preview:** Requests to `http://<YOUR_PUBLIC_IP>:80` will now serve content from `/var/www/projectlamp`.
+> ![Web Preview](screenshoots/7.png)
+
+---
